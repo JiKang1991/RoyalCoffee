@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFinish.Designer.cs">
+      <DependentUpon>FormFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCheck.Designer.cs">
+      <DependentUpon>FormCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +84,15 @@
     <Compile Include="ucPanel\ucOrder.Designer.cs">
       <DependentUpon>ucOrder.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormFinish.resx">
+      <DependentUpon>FormFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCheck.resx">
+      <DependentUpon>FormCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

@@ -31,30 +31,6 @@ namespace RoyalCoffee.ucPanel
         {
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -80,20 +56,35 @@ namespace RoyalCoffee.ucPanel
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnOrder = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -103,7 +94,16 @@ namespace RoyalCoffee.ucPanel
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage
@@ -123,30 +123,6 @@ namespace RoyalCoffee.ucPanel
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox17);
-            this.tabPage1.Controls.Add(this.textBox18);
-            this.tabPage1.Controls.Add(this.textBox19);
-            this.tabPage1.Controls.Add(this.textBox20);
-            this.tabPage1.Controls.Add(this.textBox21);
-            this.tabPage1.Controls.Add(this.textBox22);
-            this.tabPage1.Controls.Add(this.textBox23);
-            this.tabPage1.Controls.Add(this.textBox24);
-            this.tabPage1.Controls.Add(this.textBox25);
-            this.tabPage1.Controls.Add(this.textBox26);
-            this.tabPage1.Controls.Add(this.textBox27);
-            this.tabPage1.Controls.Add(this.textBox28);
-            this.tabPage1.Controls.Add(this.textBox29);
-            this.tabPage1.Controls.Add(this.textBox30);
-            this.tabPage1.Controls.Add(this.textBox31);
-            this.tabPage1.Controls.Add(this.textBox32);
-            this.tabPage1.Controls.Add(this.pictureBox9);
-            this.tabPage1.Controls.Add(this.pictureBox10);
-            this.tabPage1.Controls.Add(this.pictureBox11);
-            this.tabPage1.Controls.Add(this.pictureBox12);
-            this.tabPage1.Controls.Add(this.pictureBox13);
-            this.tabPage1.Controls.Add(this.pictureBox14);
-            this.tabPage1.Controls.Add(this.pictureBox15);
-            this.tabPage1.Controls.Add(this.pictureBox16);
             this.tabPage1.Font = new System.Drawing.Font("Nanum Pen", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Name = "tabPage1";
@@ -155,236 +131,6 @@ namespace RoyalCoffee.ucPanel
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Coffee";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox17.Location = new System.Drawing.Point(540, 590);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(140, 35);
-            this.textBox17.TabIndex = 25;
-            this.textBox17.Text = "5,000$";
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox18.Location = new System.Drawing.Point(370, 590);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(140, 35);
-            this.textBox18.TabIndex = 23;
-            this.textBox18.Text = "5,000$";
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox19.Location = new System.Drawing.Point(200, 590);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(140, 35);
-            this.textBox19.TabIndex = 22;
-            this.textBox19.Text = "5,000$";
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox20.Location = new System.Drawing.Point(30, 590);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(140, 35);
-            this.textBox20.TabIndex = 21;
-            this.textBox20.Text = "5,000$";
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.textBox21.Location = new System.Drawing.Point(30, 307);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(140, 35);
-            this.textBox21.TabIndex = 20;
-            this.textBox21.Text = "5,000$";
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox22.Location = new System.Drawing.Point(540, 307);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(140, 35);
-            this.textBox22.TabIndex = 19;
-            this.textBox22.Text = "5,000$";
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox23.Location = new System.Drawing.Point(370, 307);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(140, 35);
-            this.textBox23.TabIndex = 18;
-            this.textBox23.Text = "5,000$";
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox24.Location = new System.Drawing.Point(200, 307);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(140, 35);
-            this.textBox24.TabIndex = 17;
-            this.textBox24.Text = "5,000$";
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox25.Location = new System.Drawing.Point(540, 549);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(140, 35);
-            this.textBox25.TabIndex = 16;
-            this.textBox25.Text = "블루베리 프라푸치노";
-            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox26.Location = new System.Drawing.Point(370, 549);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(140, 35);
-            this.textBox26.TabIndex = 15;
-            this.textBox26.Text = "아이스 아메리카노";
-            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox27.Location = new System.Drawing.Point(200, 549);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(140, 35);
-            this.textBox27.TabIndex = 24;
-            this.textBox27.Text = "아이스 아메리카노";
-            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox28.Location = new System.Drawing.Point(30, 549);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(140, 35);
-            this.textBox28.TabIndex = 14;
-            this.textBox28.Text = "아이스 아메리카노";
-            this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox29
-            // 
-            this.textBox29.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.textBox29.Location = new System.Drawing.Point(30, 266);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(140, 35);
-            this.textBox29.TabIndex = 13;
-            this.textBox29.Text = "아이스 아메리카노";
-            this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox30
-            // 
-            this.textBox30.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox30.Location = new System.Drawing.Point(540, 266);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(140, 35);
-            this.textBox30.TabIndex = 12;
-            this.textBox30.Text = "아이스 아메리카노";
-            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox31
-            // 
-            this.textBox31.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox31.Location = new System.Drawing.Point(370, 266);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(140, 35);
-            this.textBox31.TabIndex = 11;
-            this.textBox31.Text = "아이스 아메리카노";
-            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox32
-            // 
-            this.textBox32.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox32.Location = new System.Drawing.Point(200, 266);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(140, 35);
-            this.textBox32.TabIndex = 10;
-            this.textBox32.Text = "아이스 아메리카노";
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Location = new System.Drawing.Point(540, 373);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Location = new System.Drawing.Point(370, 373);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox10.TabIndex = 7;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Location = new System.Drawing.Point(200, 373);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox11.TabIndex = 6;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Location = new System.Drawing.Point(30, 373);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox12.TabIndex = 5;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackgroundImage = global::RoyalCoffee.Properties.Resources.crown;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox13.Location = new System.Drawing.Point(30, 90);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox13.TabIndex = 4;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Location = new System.Drawing.Point(540, 90);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox14.TabIndex = 3;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Location = new System.Drawing.Point(370, 89);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox15.TabIndex = 9;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackgroundImage = global::RoyalCoffee.Properties.Resources.crown;
-            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox16.Location = new System.Drawing.Point(200, 89);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(140, 170);
-            this.pictureBox16.TabIndex = 2;
-            this.pictureBox16.TabStop = false;
             // 
             // tabPage2
             // 
@@ -419,7 +165,6 @@ namespace RoyalCoffee.ucPanel
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Drink";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // textBox16
             // 
@@ -649,13 +394,47 @@ namespace RoyalCoffee.ucPanel
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.textBox33);
+            this.tabPage3.Controls.Add(this.textBox34);
+            this.tabPage3.Controls.Add(this.textBox35);
+            this.tabPage3.Controls.Add(this.textBox36);
+            this.tabPage3.Controls.Add(this.textBox37);
+            this.tabPage3.Controls.Add(this.textBox38);
+            this.tabPage3.Controls.Add(this.textBox39);
+            this.tabPage3.Controls.Add(this.textBox40);
+            this.tabPage3.Controls.Add(this.textBox41);
+            this.tabPage3.Controls.Add(this.textBox42);
+            this.tabPage3.Controls.Add(this.textBox43);
+            this.tabPage3.Controls.Add(this.textBox44);
+            this.tabPage3.Controls.Add(this.textBox45);
+            this.tabPage3.Controls.Add(this.textBox46);
+            this.tabPage3.Controls.Add(this.textBox47);
+            this.tabPage3.Controls.Add(this.textBox48);
+            this.tabPage3.Controls.Add(this.pictureBox17);
+            this.tabPage3.Controls.Add(this.pictureBox18);
+            this.tabPage3.Controls.Add(this.pictureBox19);
+            this.tabPage3.Controls.Add(this.pictureBox20);
+            this.tabPage3.Controls.Add(this.pictureBox21);
+            this.tabPage3.Controls.Add(this.pictureBox22);
+            this.tabPage3.Controls.Add(this.pictureBox23);
+            this.tabPage3.Controls.Add(this.pictureBox24);
+            this.tabPage3.Location = new System.Drawing.Point(4, 54);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(710, 710);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Dessert";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel1.Controls.Add(this.btnOrder, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 809);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -676,23 +455,241 @@ namespace RoyalCoffee.ucPanel
             this.btnOrder.Text = "주문하기";
             this.btnOrder.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // textBox33
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(574, 189);
-            this.panel1.TabIndex = 1;
+            this.textBox33.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox33.Location = new System.Drawing.Point(540, 588);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(140, 35);
+            this.textBox33.TabIndex = 25;
+            this.textBox33.Text = "5,000$";
+            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tabPage3
+            // textBox34
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 54);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(710, 710);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Dessert";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.textBox34.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox34.Location = new System.Drawing.Point(370, 588);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new System.Drawing.Size(140, 35);
+            this.textBox34.TabIndex = 23;
+            this.textBox34.Text = "5,000$";
+            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox35
+            // 
+            this.textBox35.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox35.Location = new System.Drawing.Point(200, 588);
+            this.textBox35.Name = "textBox35";
+            this.textBox35.Size = new System.Drawing.Size(140, 35);
+            this.textBox35.TabIndex = 22;
+            this.textBox35.Text = "5,000$";
+            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox36
+            // 
+            this.textBox36.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox36.Location = new System.Drawing.Point(30, 588);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(140, 35);
+            this.textBox36.TabIndex = 21;
+            this.textBox36.Text = "5,000$";
+            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox37
+            // 
+            this.textBox37.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox37.Location = new System.Drawing.Point(30, 305);
+            this.textBox37.Name = "textBox37";
+            this.textBox37.Size = new System.Drawing.Size(140, 35);
+            this.textBox37.TabIndex = 20;
+            this.textBox37.Text = "5,000$";
+            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox38
+            // 
+            this.textBox38.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox38.Location = new System.Drawing.Point(540, 305);
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new System.Drawing.Size(140, 35);
+            this.textBox38.TabIndex = 19;
+            this.textBox38.Text = "5,000$";
+            this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox39
+            // 
+            this.textBox39.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox39.Location = new System.Drawing.Point(370, 305);
+            this.textBox39.Name = "textBox39";
+            this.textBox39.Size = new System.Drawing.Size(140, 35);
+            this.textBox39.TabIndex = 18;
+            this.textBox39.Text = "5,000$";
+            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox40
+            // 
+            this.textBox40.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox40.Location = new System.Drawing.Point(200, 305);
+            this.textBox40.Name = "textBox40";
+            this.textBox40.Size = new System.Drawing.Size(140, 35);
+            this.textBox40.TabIndex = 17;
+            this.textBox40.Text = "5,000$";
+            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox41
+            // 
+            this.textBox41.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox41.Location = new System.Drawing.Point(540, 547);
+            this.textBox41.Name = "textBox41";
+            this.textBox41.Size = new System.Drawing.Size(140, 35);
+            this.textBox41.TabIndex = 16;
+            this.textBox41.Text = "아이스 아메리카노";
+            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox42
+            // 
+            this.textBox42.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox42.Location = new System.Drawing.Point(370, 547);
+            this.textBox42.Name = "textBox42";
+            this.textBox42.Size = new System.Drawing.Size(140, 35);
+            this.textBox42.TabIndex = 15;
+            this.textBox42.Text = "아이스 아메리카노";
+            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox43
+            // 
+            this.textBox43.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox43.Location = new System.Drawing.Point(200, 547);
+            this.textBox43.Name = "textBox43";
+            this.textBox43.Size = new System.Drawing.Size(140, 35);
+            this.textBox43.TabIndex = 24;
+            this.textBox43.Text = "아이스 아메리카노";
+            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox44
+            // 
+            this.textBox44.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox44.Location = new System.Drawing.Point(30, 547);
+            this.textBox44.Name = "textBox44";
+            this.textBox44.Size = new System.Drawing.Size(140, 35);
+            this.textBox44.TabIndex = 14;
+            this.textBox44.Text = "아이스 아메리카노";
+            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox45
+            // 
+            this.textBox45.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox45.Location = new System.Drawing.Point(30, 264);
+            this.textBox45.Name = "textBox45";
+            this.textBox45.Size = new System.Drawing.Size(140, 35);
+            this.textBox45.TabIndex = 13;
+            this.textBox45.Text = "아이스 아메리카노";
+            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox46
+            // 
+            this.textBox46.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox46.Location = new System.Drawing.Point(540, 264);
+            this.textBox46.Name = "textBox46";
+            this.textBox46.Size = new System.Drawing.Size(140, 35);
+            this.textBox46.TabIndex = 12;
+            this.textBox46.Text = "아이스 아메리카노";
+            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox47
+            // 
+            this.textBox47.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox47.Location = new System.Drawing.Point(370, 264);
+            this.textBox47.Name = "textBox47";
+            this.textBox47.Size = new System.Drawing.Size(140, 35);
+            this.textBox47.TabIndex = 11;
+            this.textBox47.Text = "아이스 아메리카노";
+            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox48
+            // 
+            this.textBox48.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox48.Location = new System.Drawing.Point(200, 264);
+            this.textBox48.Name = "textBox48";
+            this.textBox48.Size = new System.Drawing.Size(140, 35);
+            this.textBox48.TabIndex = 10;
+            this.textBox48.Text = "아이스 아메리카노";
+            this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Location = new System.Drawing.Point(540, 371);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox17.TabIndex = 8;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(370, 371);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox18.TabIndex = 7;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Location = new System.Drawing.Point(200, 371);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox19.TabIndex = 6;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Location = new System.Drawing.Point(30, 371);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox20.TabIndex = 5;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackgroundImage = global::RoyalCoffee.Properties.Resources.crown;
+            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox21.Location = new System.Drawing.Point(30, 88);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox21.TabIndex = 4;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Location = new System.Drawing.Point(540, 88);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox22.TabIndex = 3;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Location = new System.Drawing.Point(370, 87);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox23.TabIndex = 9;
+            this.pictureBox23.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.BackgroundImage = global::RoyalCoffee.Properties.Resources.crown;
+            this.pictureBox24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox24.Location = new System.Drawing.Point(200, 87);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(140, 170);
+            this.pictureBox24.TabIndex = 2;
+            this.pictureBox24.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(574, 189);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // ucOrder
             // 
@@ -704,16 +701,6 @@ namespace RoyalCoffee.ucPanel
             this.Name = "ucOrder";
             this.Size = new System.Drawing.Size(768, 1024);
             this.tabPage.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -724,7 +711,17 @@ namespace RoyalCoffee.ucPanel
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -736,7 +733,6 @@ namespace RoyalCoffee.ucPanel
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox16;
@@ -761,30 +757,31 @@ namespace RoyalCoffee.ucPanel
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.TextBox textBox43;
+        private System.Windows.Forms.TextBox textBox44;
+        private System.Windows.Forms.TextBox textBox45;
+        private System.Windows.Forms.TextBox textBox46;
+        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.TextBox textBox48;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

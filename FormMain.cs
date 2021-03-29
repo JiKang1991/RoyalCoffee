@@ -22,6 +22,12 @@ namespace RoyalCoffee
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelMain.Visible = true;
             panelMain.Controls.Add(userControlMain);
         }
     }
