@@ -19,7 +19,29 @@ namespace RoyalCoffee
 
         private void FormCheck_Load(object sender, EventArgs e)
         {
+            this.Load += printCheckList_Load;
+        }
 
+        private void printCheckList_Load(object sender, EventArgs e)
+        {
+            printCheckList();
+        }
+
+        private void printCheckList()
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

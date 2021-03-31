@@ -37,7 +37,7 @@ namespace RoyalCoffee
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.White;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Location = new System.Drawing.Point(0, 1);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(768, 1024);
             this.panelMain.TabIndex = 1;

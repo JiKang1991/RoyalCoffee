@@ -12,7 +12,7 @@ namespace RoyalCoffee.ucPanel
 {
     public partial class ucMain : UserControl
     {
-        ucOrder userControlOrder = new ucOrder();
+        UcOrder userControlOrder = new UcOrder();
         public ucMain()
         {
             InitializeComponent();

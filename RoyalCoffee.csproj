@@ -52,11 +52,11 @@
     <Compile Include="FormFinish.Designer.cs">
       <DependentUpon>FormFinish.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormCount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormCount.Designer.cs">
+      <DependentUpon>FormCount.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCheck.cs">
       <SubType>Form</SubType>
@@ -78,17 +78,17 @@
     <Compile Include="ucPanel\ucMain.Designer.cs">
       <DependentUpon>ucMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucPanel\ucOrder.cs">
+    <Compile Include="ucPanel\UcOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucPanel\ucOrder.Designer.cs">
-      <DependentUpon>ucOrder.cs</DependentUpon>
+    <Compile Include="ucPanel\UcOrder.Designer.cs">
+      <DependentUpon>UcOrder.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormFinish.resx">
       <DependentUpon>FormFinish.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormCount.resx">
+      <DependentUpon>FormCount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCheck.resx">
       <DependentUpon>FormCheck.cs</DependentUpon>
@@ -109,8 +109,8 @@
     <EmbeddedResource Include="ucPanel\ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucPanel\ucOrder.resx">
-      <DependentUpon>ucOrder.cs</DependentUpon>
+    <EmbeddedResource Include="ucPanel\UcOrder.resx">
+      <DependentUpon>UcOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="NanumPenScript-Regular.ttf" />
     <None Include="Properties\Settings.settings">

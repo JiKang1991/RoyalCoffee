@@ -1,7 +1,7 @@
 ﻿
 namespace RoyalCoffee.ucPanel
 {
-    partial class ucOrder
+    partial class UcOrder
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -57,8 +57,6 @@ namespace RoyalCoffee.ucPanel
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnOrder = new System.Windows.Forms.Button();
             this.textBox33 = new System.Windows.Forms.TextBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.textBox35 = new System.Windows.Forms.TextBox();
@@ -83,7 +81,9 @@ namespace RoyalCoffee.ucPanel
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelTotalPrice = new System.Windows.Forms.Panel();
             this.tabPage.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -95,7 +95,6 @@ namespace RoyalCoffee.ucPanel
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -117,17 +116,19 @@ namespace RoyalCoffee.ucPanel
             this.tabPage.Multiline = true;
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(718, 768);
+            this.tabPage.Size = new System.Drawing.Size(718, 718);
             this.tabPage.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabPage.TabIndex = 2;
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.Font = new System.Drawing.Font("Nanum Pen", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tabPage1.Location = new System.Drawing.Point(4, 54);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(710, 710);
+            this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tabPage1.Size = new System.Drawing.Size(710, 660);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Coffee";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -428,33 +429,6 @@ namespace RoyalCoffee.ucPanel
             this.tabPage3.Text = "Dessert";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel1.Controls.Add(this.btnOrder, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 809);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(720, 195);
-            this.tableLayoutPanel1.TabIndex = 3;
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.White;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Nanum Pen", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnOrder.Location = new System.Drawing.Point(583, 3);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(134, 189);
-            this.btnOrder.TabIndex = 0;
-            this.btnOrder.Text = "주문하기";
-            this.btnOrder.UseVisualStyleBackColor = false;
-            // 
             // textBox33
             // 
             this.textBox33.Font = new System.Drawing.Font("Nanum Pen", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -683,22 +657,48 @@ namespace RoyalCoffee.ucPanel
             this.pictureBox24.TabIndex = 2;
             this.pictureBox24.TabStop = false;
             // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.White;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Nanum Pen", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnOrder.Location = new System.Drawing.Point(609, 765);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(134, 229);
+            this.btnOrder.TabIndex = 0;
+            this.btnOrder.Text = "결제하기";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 765);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(574, 189);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(574, 171);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // ucOrder
+            // panelTotalPrice
+            // 
+            this.panelTotalPrice.BackColor = System.Drawing.Color.White;
+            this.panelTotalPrice.Location = new System.Drawing.Point(25, 942);
+            this.panelTotalPrice.Name = "panelTotalPrice";
+            this.panelTotalPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.panelTotalPrice.Size = new System.Drawing.Size(574, 52);
+            this.panelTotalPrice.TabIndex = 3;
+            // 
+            // UcOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(35)))), ((int)(((byte)(102)))));
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.panelTotalPrice);
             this.Controls.Add(this.tabPage);
-            this.Name = "ucOrder";
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Name = "UcOrder";
             this.Size = new System.Drawing.Size(768, 1024);
             this.tabPage.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -713,7 +713,6 @@ namespace RoyalCoffee.ucPanel
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -731,7 +730,6 @@ namespace RoyalCoffee.ucPanel
         private System.Windows.Forms.TabControl tabPage;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -783,5 +781,6 @@ namespace RoyalCoffee.ucPanel
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panelTotalPrice;
     }
 }
