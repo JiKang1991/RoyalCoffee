@@ -15,6 +15,17 @@ namespace RoyalCoffee
         public FormFinish()
         {
             InitializeComponent();
+
+            this.Load += insertOrderData;
+        }
+
+        public void insertOrderData(object sender, EventArgs e)
+        {
+            ucPanel.UcOrder.ucOrder.connectDB();
+
+            string sql = $"INSERT INTO OrderDetail VALUES";
+            sqlCommand.CommandText = sql;
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace RoyalCoffee.ucPanel
         public string menuPrice = "";           // 버튼을 눌러 선택한 메뉴의 가격을 저장하는 변수입니다.
         public string menuImage = "";
         public string menuTotalPrices = "";     // 각 메뉴의 총 가격을 저장하는 변수입니다, 각 메뉴별 가격은 띄어쓰기로 구분됩니다.
-        int totalPrice = 0;
+        public int totalPrice = 0;
         public string productCount = "";
         public string menuNames = "";            
         public string menuPrices = "";          
@@ -145,8 +145,8 @@ namespace RoyalCoffee.ucPanel
                 tabPage1.Controls.Add(arrImgControls[i]);
                 tabPage1.Controls.Add(arrNameControls[i]);
                 tabPage1.Controls.Add(arrPriceControls[i]);
-            }           
-           
+            }
+            sqlConnection.Close();
         }
 
         private void menuClick(object sender, EventArgs e)
@@ -158,8 +158,8 @@ namespace RoyalCoffee.ucPanel
             menuPrice = nameAndPrice[1];
             menuImage = btn.BackgroundImage + " ";
 
-            menuNames += nameAndPrice[0];
-            menuPrices += nameAndPrice[1];
+            menuNames += nameAndPrice[0] + " ";
+            menuPrices += nameAndPrice[1] + " ";
             menuImages += btn.BackgroundImage + " ";
 
             FormCount formCount = new FormCount();
@@ -176,7 +176,7 @@ namespace RoyalCoffee.ucPanel
 
         private void printSelectedMenu()
         {
-            productCount = FormCount.formCount.productCount.ToString() + " ";
+            productCount += FormCount.formCount.productCount.ToString() + " ";
             int iMenuTotalPrice = int.Parse(menuPrice) * FormCount.formCount.productCount;
             menuTotalPrices += iMenuTotalPrice.ToString();
             totalPrice += iMenuTotalPrice;
@@ -222,7 +222,6 @@ namespace RoyalCoffee.ucPanel
                 Label lbTotalPrice = new Label();
                 lbTotalPrice.Text = "Total Price : " + totalPrice + "$";
                 lbTotalPrice.Parent = panelTotalPrice;
-                //lbTotalPrice.Size = new Size(600, 25);
                 lbTotalPrice.Font = new Font("Nanum Pen", 18);
                 lbTotalPrice.AutoSize = true;
                 panelTotalPrice.Controls.Clear();
@@ -235,6 +234,13 @@ namespace RoyalCoffee.ucPanel
         {
             FormCheck formCheck = new FormCheck();
             DialogResult dialogResult = formCheck.ShowDialog();
+            if(dialogResult != DialogResult.OK)
+            {
+                return;
+            }
+
+            FormFinish formFinish = new FormFinish();
+            dialogResult = formFinish.ShowDialog();
 
         }
     }
