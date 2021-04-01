@@ -14,17 +14,18 @@ namespace RoyalCoffee.ucPanel
     public partial class UcOrder : UserControl
     {
         public static UcOrder ucOrder;
-        SqlConnection sqlConnection = new SqlConnection();
-        SqlCommand sqlCommand = new SqlCommand();
+        public SqlConnection sqlConnection = new SqlConnection();
+        public SqlCommand sqlCommand = new SqlCommand();
         public string menuName = "";            // 버튼을 눌러 선택한 메뉴의 이름을 저장하는 변수입니다.
         public string menuPrice = "";           // 버튼을 눌러 선택한 메뉴의 가격을 저장하는 변수입니다.
         public string menuImage = "";
         public string menuTotalPrices = "";     // 각 메뉴의 총 가격을 저장하는 변수입니다, 각 메뉴별 가격은 띄어쓰기로 구분됩니다.
         public int totalPrice = 0;
-        public string productCount = "";
+        public string menuNumbers = "";
         public string menuNames = "";            
         public string menuPrices = "";          
         public string menuImages = "";
+        public string productCounts = "";
 
 
 
@@ -37,7 +38,8 @@ namespace RoyalCoffee.ucPanel
         }
         // printProductList() 메소드를 호출하는 메소드
         public void printProductList_Load(object sender, EventArgs e)
-        {
+        {            
+
             printProductList(1);
         }
 
@@ -76,24 +78,26 @@ namespace RoyalCoffee.ucPanel
 
             
             // product 테이블에서 카테고리넘버1(커피류)에 해당하는 제품들의 정보를 조회하는 sql문
-            string sql = $"SELECT productImage, productname, productprice FROM product WHERE categorynumber = {categoryNum}";
+            string sql = $"SELECT productnumber, productimage, productname, productprice FROM product WHERE categorynumber = {categoryNum}";
             sqlCommand.CommandText = sql;
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
-            string productImage = "";
+            string productNumbers = "";
+            string productImages = "";
             string productNames = "";
             string productPrices = "";
             for(int i = 0; sqlDataReader.Read(); i++)
             {
-                productImage += sqlDataReader.GetString(0) + " ";
-                productNames += sqlDataReader.GetString(1) + " ";
-                productPrices += $"{sqlDataReader.GetInt32(2)} ";
+                productNumbers += sqlDataReader.GetInt32(0) + " ";
+                productImages += sqlDataReader.GetString(1) + " ";
+                productNames += sqlDataReader.GetString(2) + " ";
+                productPrices += $"{sqlDataReader.GetInt32(3)} ";
             }
 
-            string[] arrProductImages = productImage.Trim().Split(' '); 
+            string[] arrProductNumbers = productNumbers.Trim().Split(' ');
+            string[] arrProductImages = productImages.Trim().Split(' '); 
             string[] arrProductNames = productNames.Trim().Split(' ');
-            string[] arrProductPrices = productPrices.Trim().Split(' ');
-                        
+            string[] arrProductPrices = productPrices.Trim().Split(' ');                        
 
             Control[] arrImgControls = new Control[arrProductImages.Length];
             Control[] arrNameControls = new Control[arrProductNames.Length];
@@ -105,7 +109,7 @@ namespace RoyalCoffee.ucPanel
                 arrNameControls[i] = new Label();
                 arrPriceControls[i] = new Label();
 
-                arrImgControls[i].Name = arrProductNames[i] + " " + arrProductPrices[i]; ;
+                arrImgControls[i].Name = arrProductNumbers[i] + " " + arrProductNames[i] + " " + arrProductPrices[i]; 
                 arrNameControls[i].Name = "name" + arrProductNames[i];
                 arrPriceControls[i].Name = "price" + arrProductNames[i];
 
@@ -153,13 +157,14 @@ namespace RoyalCoffee.ucPanel
         {
             // 메소드를 호출한 버튼의 객체를 변수에 대입합니다.
             Button btn = sender as Button;
-            string[] nameAndPrice = btn.Name.Split(' ');
-            menuName = nameAndPrice[0];
-            menuPrice = nameAndPrice[1];
+            string[] numberNamePrice = btn.Name.Split(' ');
+            menuName = numberNamePrice[1];
+            menuPrice = numberNamePrice[2];
             menuImage = btn.BackgroundImage + " ";
 
-            menuNames += nameAndPrice[0] + " ";
-            menuPrices += nameAndPrice[1] + " ";
+            menuNumbers += numberNamePrice[0] + " ";
+            menuNames += numberNamePrice[1] + " ";
+            menuPrices += numberNamePrice[2] + " ";
             menuImages += btn.BackgroundImage + " ";
 
             FormCount formCount = new FormCount();
@@ -169,6 +174,8 @@ namespace RoyalCoffee.ucPanel
             {
                 return;
             }
+            productCounts += FormCount.formCount.productCount + " ";
+            flowLayoutPanel1.Controls.Clear();
             printSelectedMenu();
             
 
@@ -176,20 +183,19 @@ namespace RoyalCoffee.ucPanel
 
         private void printSelectedMenu()
         {
-            productCount += FormCount.formCount.productCount.ToString() + " ";
             int iMenuTotalPrice = int.Parse(menuPrice) * FormCount.formCount.productCount;
-            menuTotalPrices += iMenuTotalPrice.ToString();
+            menuTotalPrices += iMenuTotalPrice.ToString() + " ";
             totalPrice += iMenuTotalPrice;
 
-            string[] arrSelectedMenuImages = menuImage.Trim().Split(' ');
-            string[] arrSelectedMenuNames = menuName.Trim().Split(' ');
-            string[] arrSelectedMenuPrice = menuPrice.Trim().Split(' ');
-            string[] arrSelectedProductCount = productCount.Trim().Split(' ');
+            string[] arrSelectedMenuImages = menuImages.Trim().Split(' ');
+            string[] arrSelectedMenuNames = menuNames.Trim().Split(' ');
+            string[] arrSelectedMenuPrices = menuTotalPrices.Trim().Split(' ');
+            string[] arrSelectedProductCounts = productCounts.Trim().Split(' ');
 
             Control[] selectedImage = new Control[arrSelectedMenuImages.Length]; 
             Control[] selectedName = new Control[arrSelectedMenuNames.Length];
-            Control[] selectedCount = new Control[arrSelectedProductCount.Length];
-            Control[] selectedPrice = new Control[arrSelectedMenuPrice.Length];
+            Control[] selectedCount = new Control[arrSelectedProductCounts.Length];
+            Control[] selectedPrice = new Control[arrSelectedMenuPrices.Length];
             Control[] cencelBtn = new Control[arrSelectedMenuNames.Length];
 
             for (int i = 0; i < selectedName.Length; i++)
@@ -203,16 +209,16 @@ namespace RoyalCoffee.ucPanel
                 selectedImage[i].BackgroundImage = Properties.Resources.crown;
                 selectedImage[i].BackgroundImageLayout = ImageLayout.Zoom;
 
-                selectedName[i].Text = FormCount.formCount.productName;
-                selectedCount[i].Text = "x" + FormCount.formCount.productCount;
-                selectedPrice[i].Text = iMenuTotalPrice.ToString() + "$";
+                selectedName[i].Text = arrSelectedMenuNames[i];
+                selectedCount[i].Text = "x" + arrSelectedProductCounts[i];
+                selectedPrice[i].Text = arrSelectedMenuPrices[i] + "$";
 
                 selectedName[i].Font = new Font("Nanum Pen", 18);
                 selectedCount[i].Font = new Font("Nanum Pen", 18);
                 selectedPrice[i].Font = new Font("Nanum Pen", 18);
 
                 selectedName[i].Size = new Size(140, 50);
-
+                                
                 flowLayoutPanel1.Controls.Add(selectedImage[i]);
                 flowLayoutPanel1.Controls.Add(selectedName[i]);
                 flowLayoutPanel1.Controls.Add(selectedCount[i]);
@@ -241,6 +247,16 @@ namespace RoyalCoffee.ucPanel
 
             FormFinish formFinish = new FormFinish();
             dialogResult = formFinish.ShowDialog();
+
+            if(dialogResult != DialogResult.OK)
+            {
+                return;
+            }
+
+            FormMain.formMain.panelMain.Controls.Remove(ucOrder);
+            //this.Parent.Controls.Remove(ucOrder);
+            ucPanel.UcMain.ucMain.Show();
+           
 
         }
     }

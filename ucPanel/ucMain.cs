@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace RoyalCoffee.ucPanel
 {
-    public partial class ucMain : UserControl
+    public partial class UcMain : UserControl
     {
-        UcOrder userControlOrder = new UcOrder();
-        public ucMain()
+        public static UcMain ucMain;
+        UcOrder userControlOrder;
+        public UcMain()
         {
             InitializeComponent();
+
+            ucMain = this;
         }
 
         private void btnMain_Click(object sender, EventArgs e)
         {
+            userControlOrder = new UcOrder();
             FormMain.formMain.panelMain.Controls.Add(userControlOrder);
             this.Hide();
         }

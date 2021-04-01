@@ -1,7 +1,7 @@
 ﻿
 namespace RoyalCoffee.ucPanel
 {
-    partial class ucMain
+    partial class UcMain
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.

@@ -28,7 +28,7 @@ namespace RoyalCoffee
         {
             string[] arrCheckImgs = ucPanel.UcOrder.ucOrder.menuImages.Trim().Split(' '); 
             string[] arrCheckNames = ucPanel.UcOrder.ucOrder.menuNames.Trim().Split(' ');
-            string[] arrCheckCounts = ucPanel.UcOrder.ucOrder.productCount.Trim().Split(' ');
+            string[] arrCheckCounts = ucPanel.UcOrder.ucOrder.productCounts.Trim().Split(' ');
 
             Control[] arrImgControls = new Control[arrCheckImgs.Length];
             Control[] arrNameControls = new Control[arrCheckNames.Length];

@@ -13,7 +13,8 @@ namespace RoyalCoffee
     public partial class FormMain : Form
     {
         public static FormMain formMain;
-        ucPanel.ucMain userControlMain = new ucPanel.ucMain();
+        ucPanel.UcMain userControlMain = new ucPanel.UcMain();
+        
         public FormMain()
         {
             InitializeComponent();
