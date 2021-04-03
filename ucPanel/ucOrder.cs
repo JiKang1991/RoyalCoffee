@@ -15,7 +15,7 @@ namespace RoyalCoffee.ucPanel
     {
         public static UcOrder ucOrder;
         public SqlConnection sqlConnection = new SqlConnection();
-        public SqlCommand sqlCommand = new SqlCommand();
+        public SqlCommand sqlCommand = new SqlCommand();        
         public string menuName = "";            // 버튼을 눌러 선택한 메뉴의 이름을 저장하는 변수입니다.
         public string menuPrice = "";           // 버튼을 눌러 선택한 메뉴의 가격을 저장하는 변수입니다.
         public string menuImage = "";
@@ -48,7 +48,7 @@ namespace RoyalCoffee.ucPanel
         {
             try
             {
-                sqlConnection.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\jikang\OneDrive\문서\RoyalCoffee.mdf; Integrated Security = True; Connect Timeout = 30";
+                sqlConnection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\kosta203\RoyalCoffee\RoyalCoffeeDB.mdf;Integrated Security=True;Connect Timeout=30";
                 sqlConnection.Open();
                 sqlCommand.Connection = sqlConnection;
             }
@@ -57,14 +57,7 @@ namespace RoyalCoffee.ucPanel
                 MessageBox.Show(exception.Message);
             }
         }
-
-        // 테이블명을 반환하는 메소드
-        public void getTableName()
-        {
-            DataTable dataTable = sqlConnection.GetSchema("Tables");
-        }  
-
-       
+                    
         public void printProductList(int categoryNum)
         {
 
@@ -126,7 +119,7 @@ namespace RoyalCoffee.ucPanel
                 arrPriceControls[i].Size = new Size(140, 30);
 
                 arrNameControls[i].Text =  arrProductNames[i];
-                arrPriceControls[i].Text = arrProductPrices[i]+"$";
+                arrPriceControls[i].Text = arrProductPrices[i]+ "￦";
 
                 arrNameControls[i].Font = new Font("Nanum Pen", 18);
                 arrPriceControls[i].Font = new Font("Nanum Pen", 18); 
@@ -135,7 +128,8 @@ namespace RoyalCoffee.ucPanel
                 arrImgControls[i].BackgroundImageLayout = ImageLayout.Center;
                 arrImgControls[i].Click += new EventHandler(menuClick);
 
-                if(i == 3)
+                int index = i + 1;
+                if(index % 4 == 0)
                 {
                     width = 30;
                     picHeight += 275;
@@ -146,11 +140,28 @@ namespace RoyalCoffee.ucPanel
                 {
                     width += 160;
                 }
-                tabPage1.Controls.Add(arrImgControls[i]);
-                tabPage1.Controls.Add(arrNameControls[i]);
-                tabPage1.Controls.Add(arrPriceControls[i]);
+
+                if (categoryNum == 1)
+                {
+                    tabPage1.Controls.Add(arrImgControls[i]);
+                    tabPage1.Controls.Add(arrNameControls[i]);
+                    tabPage1.Controls.Add(arrPriceControls[i]);
+                } 
+                else if(categoryNum == 2)
+                {
+                    tabPage2.Controls.Add(arrImgControls[i]);
+                    tabPage2.Controls.Add(arrNameControls[i]);
+                    tabPage2.Controls.Add(arrPriceControls[i]);
+                }
+                else if(categoryNum == 3)
+                {
+                    tabPage3.Controls.Add(arrImgControls[i]);
+                    tabPage3.Controls.Add(arrNameControls[i]);
+                    tabPage3.Controls.Add(arrPriceControls[i]);
+                }
             }
             sqlConnection.Close();
+            btnOrder.Enabled = false;
         }
 
         private void menuClick(object sender, EventArgs e)
@@ -175,18 +186,27 @@ namespace RoyalCoffee.ucPanel
                 return;
             }
             productCounts += FormCount.formCount.productCount + " ";
-            flowLayoutPanel1.Controls.Clear();
+            
             printSelectedMenu();
             
 
         }
 
-        private void printSelectedMenu()
+        private void printSelectedMenu(bool flag = true)
         {
-            int iMenuTotalPrice = int.Parse(menuPrice) * FormCount.formCount.productCount;
-            menuTotalPrices += iMenuTotalPrice.ToString() + " ";
-            totalPrice += iMenuTotalPrice;
-
+            flowLayoutPanel1.Controls.Clear();
+            if (flag == true)
+            {
+                int iMenuTotalPrice = int.Parse(menuPrice) * FormCount.formCount.productCount;
+                menuTotalPrices += iMenuTotalPrice.ToString() + " ";
+                totalPrice += iMenuTotalPrice;
+            }
+            if (menuImages.Equals(""))
+            {
+                panelTotalPrice.Controls.Clear();
+                btnOrder.Enabled = false;
+                return;
+            }
             string[] arrSelectedMenuImages = menuImages.Trim().Split(' ');
             string[] arrSelectedMenuNames = menuNames.Trim().Split(' ');
             string[] arrSelectedMenuPrices = menuTotalPrices.Trim().Split(' ');
@@ -211,14 +231,20 @@ namespace RoyalCoffee.ucPanel
 
                 selectedName[i].Text = arrSelectedMenuNames[i];
                 selectedCount[i].Text = "x" + arrSelectedProductCounts[i];
-                selectedPrice[i].Text = arrSelectedMenuPrices[i] + "$";
+                selectedPrice[i].Text = arrSelectedMenuPrices[i] + "￦";
 
                 selectedName[i].Font = new Font("Nanum Pen", 18);
                 selectedCount[i].Font = new Font("Nanum Pen", 18);
                 selectedPrice[i].Font = new Font("Nanum Pen", 18);
 
                 selectedName[i].Size = new Size(140, 50);
-                                
+
+                cencelBtn[i].Name = i + " " + arrSelectedMenuPrices[i];
+                cencelBtn[i].BackgroundImage = Properties.Resources.cancel;
+                cencelBtn[i].BackgroundImageLayout = ImageLayout.Zoom;
+                cencelBtn[i].Size = new Size(20, 20);
+                cencelBtn[i].Click += new EventHandler(selectCancel);
+
                 flowLayoutPanel1.Controls.Add(selectedImage[i]);
                 flowLayoutPanel1.Controls.Add(selectedName[i]);
                 flowLayoutPanel1.Controls.Add(selectedCount[i]);
@@ -226,14 +252,50 @@ namespace RoyalCoffee.ucPanel
                 flowLayoutPanel1.Controls.Add(cencelBtn[i]);
 
                 Label lbTotalPrice = new Label();
-                lbTotalPrice.Text = "Total Price : " + totalPrice + "$";
+                lbTotalPrice.Text = "Total Price : " + totalPrice + "￦";
                 lbTotalPrice.Parent = panelTotalPrice;
                 lbTotalPrice.Font = new Font("Nanum Pen", 18);
                 lbTotalPrice.AutoSize = true;
                 panelTotalPrice.Controls.Clear();
                 panelTotalPrice.Controls.Add(lbTotalPrice);
             }
+            btnOrder.Enabled = true;
+        }
+
+        private void selectCancel(object sender, EventArgs e)
+        {
+            // 메소드를 호출한 버튼의 객체를 변수에 대입합니다.
+            Button btn = sender as Button;
+            string[] indexPrice = btn.Name.Split(' ');
+            int index = int.Parse(indexPrice[0]);
+            int price = int.Parse(indexPrice[1]);
             
+            string[] arrSelectedMenuImages = menuImages.Trim().Split(' ');
+            string[] arrSelectedMenuNames = menuNames.Trim().Split(' ');
+            string[] arrSelectedMenuPrices = menuTotalPrices.Trim().Split(' ');
+            string[] arrSelectedProductCounts = productCounts.Trim().Split(' ');
+
+            menuImages = removeStr(arrSelectedMenuImages, index, menuImages);
+            menuNames = removeStr(arrSelectedMenuNames, index, menuNames);
+            menuTotalPrices = removeStr(arrSelectedMenuPrices, index, menuTotalPrices);
+            productCounts = removeStr(arrSelectedProductCounts, index, productCounts);
+            totalPrice -= price;
+            printSelectedMenu(false);
+
+        }
+
+        private string removeStr(string[] source, int index, string target)
+        {
+            target = "";
+            for(int i = 0; i < source.Length; i++)
+            {
+                if(i != index)
+                {
+                    
+                    target += source[i] + " ";
+                }
+            }
+            return target;
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -254,10 +316,14 @@ namespace RoyalCoffee.ucPanel
             }
 
             FormMain.formMain.panelMain.Controls.Remove(ucOrder);
-            //this.Parent.Controls.Remove(ucOrder);
             ucPanel.UcMain.ucMain.Show();
            
 
+        }
+        
+        private void tabPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            printProductList(int.Parse(tabPage.SelectedTab.Name.Substring(7, 1)));
         }
     }
 }

@@ -15,12 +15,19 @@ namespace RoyalCoffee
     {
         SqlConnection sqlConnection = ucPanel.UcOrder.ucOrder.sqlConnection;
         SqlCommand sqlCommand = ucPanel.UcOrder.ucOrder.sqlCommand;
+        
+
         public FormFinish()
         {
-            InitializeComponent();
-
-            this.Load += insertOrderData;
+            InitializeComponent();    
         }
+
+        private void FormFinish_Load(object sender, EventArgs e)
+        {
+            //timer1.Interval = 5000;
+            insertOrderData(sender, e);
+        }
+                
 
         public void insertOrderData(object sender, EventArgs e)
         {
@@ -73,5 +80,14 @@ namespace RoyalCoffee
                 MessageBox.Show(exception.Message);
             }
         }
+        
+        /*
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            FormMain.formMain.panelMain.Controls.Remove(ucPanel.UcOrder.ucOrder);
+            ucPanel.UcMain.ucMain.Show();
+            this.Close();
+        }
+        */
     }
 }

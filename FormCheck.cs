@@ -56,7 +56,7 @@ namespace RoyalCoffee
                 flowLayoutPanel1.Controls.Add(arrCountControls[i]);
 
                 Label lbTotalPrice = new Label();
-                lbTotalPrice.Text = "Total Price : " + ucPanel.UcOrder.ucOrder.totalPrice + "$";
+                lbTotalPrice.Text = "Total Price : " + ucPanel.UcOrder.ucOrder.totalPrice + "￦";
                 lbTotalPrice.Parent = panelTotalPrice;
                 lbTotalPrice.Font = new Font("Nanum Pen", 18);
                 lbTotalPrice.AutoSize = true;

@@ -107,6 +107,7 @@ namespace RoyalCoffee
             this.Name = "FormFinish";
             this.ShowInTaskbar = false;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormFinish_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
