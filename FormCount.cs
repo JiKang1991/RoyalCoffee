@@ -30,7 +30,7 @@ namespace RoyalCoffee
 
         private void button1_Click(object sender, EventArgs e)
         {
-            productCount = (int)numericUpDown1.Value;
+            productCount = (int)numericUpDown1.Value;            
         }
     }
 }
