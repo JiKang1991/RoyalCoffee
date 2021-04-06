@@ -12,19 +12,21 @@ namespace RoyalCoffee.ucPanel
 {
     public partial class UcMain : UserControl
     {
+        private Panel callPanel;
         public static UcMain ucMain;
-        UcOrder userControlOrder;
-        public UcMain()
+        public UcMain(Panel callPanel)
         {
             InitializeComponent();
 
             ucMain = this;
+
+            this.callPanel = callPanel;
         }
 
         private void btnMain_Click(object sender, EventArgs e)
         {
-            userControlOrder = new UcOrder();
-            FormMain.formMain.panelMain.Controls.Add(userControlOrder);
+            UcOrder userControlOrder = new UcOrder(callPanel);
+            callPanel.Controls.Add(userControlOrder);
             this.Hide();
         }
     }

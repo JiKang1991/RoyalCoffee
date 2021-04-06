@@ -14,8 +14,10 @@ namespace RoyalCoffee.ucPanel
     public partial class UcOrder : UserControl
     {
         public static UcOrder ucOrder;
+
         public SqlConnection sqlConnection = new SqlConnection();
-        public SqlCommand sqlCommand = new SqlCommand();        
+        public SqlCommand sqlCommand = new SqlCommand(); 
+        
         public string menuName = "";            // 버튼을 눌러 선택한 메뉴의 이름을 저장하는 변수입니다.
         public string menuPrice = "";           // 버튼을 눌러 선택한 메뉴의 가격을 저장하는 변수입니다.
         public string menuImage = "";
@@ -27,20 +29,25 @@ namespace RoyalCoffee.ucPanel
         public string menuImages = "";
         public string productCounts = "";
 
+        private Panel callPanel;
 
-
-        public UcOrder()
+        public UcOrder(Panel callPanel)
         {
             InitializeComponent();
 
             this.Load += printProductList_Load;
             ucOrder = this;
+
+            this.callPanel = callPanel;
         }
         // printProductList() 메소드를 호출하는 메소드
         public void printProductList_Load(object sender, EventArgs e)
         {            
 
             printProductList(1);
+
+            //
+            UcPrintMenu ucPrintMenu = new UcPrintMenu(this.sqlConnection, this.sqlCommand, this.tabPage1);
         }
 
         // RoyalCoffee.mdf 연결 메소드
@@ -48,7 +55,7 @@ namespace RoyalCoffee.ucPanel
         {
             try
             {
-                sqlConnection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\kosta203\RoyalCoffee\RoyalCoffeeDB.mdf;Integrated Security=True;Connect Timeout=30";
+                sqlConnection.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Coding\RoyalCoffee\RoyalCoffeeDB.mdf;Integrated Security=True;Connect Timeout=30";
                 sqlConnection.Open();
                 sqlCommand.Connection = sqlConnection;
             }
@@ -315,7 +322,7 @@ namespace RoyalCoffee.ucPanel
                 return;
             }
 
-            FormMain.formMain.panelMain.Controls.Remove(ucOrder);
+            callPanel.Controls.Remove(ucOrder);
             ucPanel.UcMain.ucMain.Show();
            
 

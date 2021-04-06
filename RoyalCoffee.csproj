@@ -70,6 +70,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="ucPanel\UcOrder.Designer.cs">
       <DependentUpon>UcOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPanel\UcPrintMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPanel\UcPrintMenu.Designer.cs">
+      <DependentUpon>UcPrintMenu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormFinish.resx">
       <DependentUpon>FormFinish.cs</DependentUpon>
@@ -111,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucPanel\UcOrder.resx">
       <DependentUpon>UcOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPanel\UcPrintMenu.resx">
+      <DependentUpon>UcPrintMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="NanumPenScript-Regular.ttf" />
     <None Include="Properties\Settings.settings">

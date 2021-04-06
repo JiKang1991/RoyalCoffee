@@ -12,23 +12,18 @@ namespace RoyalCoffee
 {
     public partial class FormMain : Form
     {
-        public static FormMain formMain;
-        ucPanel.UcMain userControlMain = new ucPanel.UcMain();
+        //public static FormMain formMain;
+        //ucPanel.UcMain userControlMain = new ucPanel.UcMain();
         
         public FormMain()
         {
             InitializeComponent();
-            formMain = this;
-        }
+            //formMain = this;
+        }       
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            panelMain.Visible = true;
+            ucPanel.UcMain userControlMain = new ucPanel.UcMain(this.panelMain);
             panelMain.Controls.Add(userControlMain);
         }
     }
